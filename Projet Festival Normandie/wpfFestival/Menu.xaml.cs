@@ -20,8 +20,13 @@ namespace wpfFestival
     {
         public Menu()
         {
-            InitializeComponent();
+            if(Session.connecte == true)
+            {
+                InitializeComponent();
+            }
+             
         }
+
         // Lorsqu'on appuie sur le bouton BtnOrganisateur_Clik, on se dirige vers la page Organisateur
         private void BtnOrganisateur_Click(object sender, RoutedEventArgs e)
         {
@@ -34,6 +39,13 @@ namespace wpfFestival
             pageFestival pagefestival = new pageFestival();
             this.NavigationService.Navigate(pagefestival);
             
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Session.connecte = false;
+            Connexion connexion = new Connexion();
+            this.NavigationService.Navigate(connexion);
         }
     }
 }

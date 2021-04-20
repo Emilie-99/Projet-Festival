@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FestivalAPI.Migrations
 {
     [DbContext(typeof(FestivalAPIContext))]
-    [Migration("20210414232758_lol")]
-    partial class lol
+    [Migration("20210420162743_Model1")]
+    partial class Model1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,6 +37,31 @@ namespace FestivalAPI.Migrations
                     b.HasKey("FestivalId");
 
                     b.ToTable("Festival");
+                });
+
+            modelBuilder.Entity("FestivalAPI.Models.Gestionnaire", b =>
+                {
+                    b.Property<int>("IdGestionnaire")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mdp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nom")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Prenom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdGestionnaire");
+
+                    b.ToTable("Gestionnaire");
                 });
 
             modelBuilder.Entity("FestivalAPI.Models.Organisateur", b =>

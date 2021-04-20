@@ -24,7 +24,11 @@ namespace wpfFestival
         private string Emailorga;
         public deleteOrganisateur()
         {
-            InitializeComponent();
+            if (Session.connecte == true)
+            {
+                InitializeComponent();
+            }
+            
             ListeOrganisateurs = API.Instance.GetOrganisateur().Result;
             foreach (Organisateur organisateur in ListeOrganisateurs)
             {

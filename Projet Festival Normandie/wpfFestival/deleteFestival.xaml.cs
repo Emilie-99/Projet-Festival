@@ -24,7 +24,11 @@ namespace wpfFestival
         private string nomfesti;
         public deleteFestival()
         {
-            InitializeComponent();
+            if(Session.connecte == true)
+            {
+                InitializeComponent();
+            }
+            
             ListeFestivals = API.Instance.GetFestival().Result;
             foreach (Festival festival in ListeFestivals)
             {

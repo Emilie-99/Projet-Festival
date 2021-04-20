@@ -37,6 +37,31 @@ namespace FestivalAPI.Migrations
                     b.ToTable("Festival");
                 });
 
+            modelBuilder.Entity("FestivalAPI.Models.Gestionnaire", b =>
+                {
+                    b.Property<int>("IdGestionnaire")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mdp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nom")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Prenom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdGestionnaire");
+
+                    b.ToTable("Gestionnaire");
+                });
+
             modelBuilder.Entity("FestivalAPI.Models.Organisateur", b =>
                 {
                     b.Property<int>("IdOrganisateur")

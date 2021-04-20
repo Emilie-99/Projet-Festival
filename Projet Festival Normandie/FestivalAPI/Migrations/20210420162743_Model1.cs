@@ -2,7 +2,7 @@
 
 namespace FestivalAPI.Migrations
 {
-    public partial class lol : Migration
+    public partial class Model1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,6 +18,22 @@ namespace FestivalAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Festival", x => x.FestivalId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Gestionnaire",
+                columns: table => new
+                {
+                    IdGestionnaire = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nom = table.Column<string>(nullable: false),
+                    Prenom = table.Column<string>(nullable: true),
+                    Mdp = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Gestionnaire", x => x.IdGestionnaire);
                 });
 
             migrationBuilder.CreateTable(
@@ -51,6 +67,9 @@ namespace FestivalAPI.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Gestionnaire");
+
             migrationBuilder.DropTable(
                 name: "Organisateur");
 

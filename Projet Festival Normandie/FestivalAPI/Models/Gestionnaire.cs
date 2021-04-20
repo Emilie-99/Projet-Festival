@@ -13,7 +13,7 @@ namespace FestivalAPI.Models
         [Required]
         public string Nom { get; set; }
         public string Prenom { get; set; }
-        public string Mot_de_passe { get; set; }
+        public string Mdp { get; set; }
         public string Email { get; set; }
     }
 }

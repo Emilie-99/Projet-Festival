@@ -234,10 +234,10 @@ namespace wpfFestival.ControllersAPI
         }
 
 
-        public async Task<Gestionnaire> GetGestionnaire(string? email, string? mdp)
+        public async Task<Gestionnaire> GetLoginGestionnaire(string email, string mdp)
         {
             Gestionnaire Gestionnaire = null;
-            HttpResponseMessage response = client.GetAsync("api/Gestionnaires/" + email + mdp).Result;
+            HttpResponseMessage response = client.GetAsync("api/Gestionnaires/GetLoginGestionnaire/" + email +"/"+  mdp).Result;
             if (response.IsSuccessStatusCode)
             {
                 var resp = await response.Content.ReadAsStringAsync();

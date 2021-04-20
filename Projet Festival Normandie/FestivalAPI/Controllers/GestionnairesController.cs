@@ -41,19 +41,23 @@ namespace FestivalAPI.Controllers
 
             return gestionnaire;
         }
+     
 
-        [HttpGet("{Email}/{Mot_de_passe}")]
-        public async Task<ActionResult<Gestionnaire>> GetGestionnaire(string email,string mdp)
+        [HttpGet("GetLoginGestionnaire/{Email}/{Mdp}")]
+        public async Task<ActionResult<Gestionnaire>> GetLoginGestionnaire( string email,string mdp)
         {
-            var gestionnaire = await _context.Gestionnaire.FirstOrDefaultAsync(u => u.Email.Equals(email) && u.Mot_de_passe.Equals(mdp));
+            var gestionnaire = await _context.Gestionnaire.FirstOrDefaultAsync(u => u.Email.Equals(email) && u.Mdp.Equals(mdp));
+
 
             if (gestionnaire == null)
             {
                 return NotFound();
             }
 
+
             return gestionnaire;
         }
+
         // PUT: api/Gestionnaires/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.

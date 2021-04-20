@@ -20,15 +20,14 @@ namespace wpfFestival
     /// </summary>
     public partial class Connexion : Page
     {
-
-        private readonly ICollection<Gestionnaire> ListeGestionnaires;
-        private bool authoriser = false;
-
+        
         public Connexion()
         {
-            InitializeComponent();
-            //Récupération de tous les gestionnaires 
-            ListeGestionnaires = API.Instance.GetGestionnaire().Result;
+            
+                InitializeComponent();
+            
+            
+           
         }
 
 
@@ -38,22 +37,15 @@ namespace wpfFestival
 
             if (LoginTextBox.Text != "" && MdpTextBox.Text != "")
             {
-                foreach(Gestionnaire gestionnaire in ListeGestionnaires)
-                { 
-                    if (gestionnaire.Email == LoginTextBox.Text && gestionnaire.Mot_de_passe == MdpTextBox.Text)
-                    {
-                        authoriser = true;
-                    }
-                    
-                }
+                Gestionnaire gestionnaire = API.Instance.GetLoginGestionnaire(LoginTextBox.Text, MdpTextBox.Text).Result;
 
-                if(authoriser == true)
+                if (gestionnaire != null)
                 {
+                    Session.connecte = true;
                     Menu menu = new Menu();
                     this.NavigationService.Navigate(menu);
                 }
-               
-                 else
+                else
                 {
 
                     MessageBox.Show("Login et/ou Mot de passe incorrect(s) ", "Erreur de connexion !", MessageBoxButton.OK, MessageBoxImage.Information);
