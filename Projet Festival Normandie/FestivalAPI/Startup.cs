@@ -59,7 +59,7 @@ namespace FestivalAPI
             using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
             {
                 var context = serviceScope.ServiceProvider.GetRequiredService<FestivalAPIContext>();
-                //context.Database.EnsureDeleted();
+               // context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
             }
         }
