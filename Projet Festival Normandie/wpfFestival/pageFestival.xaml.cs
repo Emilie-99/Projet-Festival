@@ -39,9 +39,11 @@ namespace wpfFestival
         }
         public pageFestival()
         {
-            InitializeComponent();
-            dgFestival.ItemsSource = Loaddata();
-            
+            if (Session.connecte == true)
+            {
+                InitializeComponent();
+                dgFestival.ItemsSource = Loaddata();
+            }
 
         }
 

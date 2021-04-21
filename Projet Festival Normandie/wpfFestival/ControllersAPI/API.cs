@@ -14,7 +14,7 @@ namespace wpfFestival.ControllersAPI
 
         private API()
         {
-            client.BaseAddress = new Uri("http://localhost:63398/");
+            client.BaseAddress = new Uri("http://localhost:63398");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -36,6 +36,12 @@ namespace wpfFestival.ControllersAPI
                 }
             }
         }
+
+        internal object GetGestionnaire(object text, object mdp_TextBox)
+        {
+            throw new NotImplementedException();
+        }
+
         /**************************************** Festival **************************************/
         public async Task<ICollection<Festival>> GetFestival()
         {
@@ -211,6 +217,33 @@ namespace wpfFestival.ControllersAPI
                 Console.WriteLine(ex.Message);
             }
             return null;
+        }
+
+
+        /*******************************************Gestionnaire*************************************************/
+        public async Task<ICollection<Gestionnaire>> GetGestionnaire()
+        {
+            ICollection<Gestionnaire> Gestionnaire = new List<Gestionnaire>();
+            HttpResponseMessage response = client.GetAsync("api/Gestionnaires").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var resp = await response.Content.ReadAsStringAsync();
+                Gestionnaire = JsonConvert.DeserializeObject<List<Gestionnaire>>(resp);
+            }
+            return Gestionnaire;
+        }
+
+
+        public async Task<Gestionnaire> GetLoginGestionnaire(string email, string mdp)
+        {
+            Gestionnaire Gestionnaire = null;
+            HttpResponseMessage response = client.GetAsync("api/Gestionnaires/GetLoginGestionnaire/" + email +"/"+  mdp).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var resp = await response.Content.ReadAsStringAsync();
+                Gestionnaire = JsonConvert.DeserializeObject<Gestionnaire>(resp);
+            }
+            return Gestionnaire;
         }
     }
 

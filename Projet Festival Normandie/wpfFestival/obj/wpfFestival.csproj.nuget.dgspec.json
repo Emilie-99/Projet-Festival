@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\wpfFestival\\wpfFestival.csproj": {}
+    "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\wpfFestival\\wpfFestival.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj": {
+    "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj",
+        "projectUniqueName": "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj",
         "projectName": "FestivalAPI",
-        "projectPath": "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj",
-        "packagesPath": "C:\\Users\\tomli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\FestivalAPI\\obj\\",
+        "projectPath": "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj",
+        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\FestivalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tomli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,32 +85,32 @@
         }
       }
     },
-    "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\wpfFestival\\wpfFestival.csproj": {
+    "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\wpfFestival\\wpfFestival.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\wpfFestival\\wpfFestival.csproj",
+        "projectUniqueName": "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\wpfFestival\\wpfFestival.csproj",
         "projectName": "wpfFestival",
-        "projectPath": "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\wpfFestival\\wpfFestival.csproj",
-        "packagesPath": "C:\\Users\\tomli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\wpfFestival\\obj\\",
+        "projectPath": "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\wpfFestival\\wpfFestival.csproj",
+        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\wpfFestival\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tomli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj": {
-                "projectPath": "C:\\Users\\tomli\\source\\repos\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj"
+              "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj": {
+                "projectPath": "C:\\Users\\emili\\source\\repos\\Projet-Festival\\Projet_Festival_Normandie1\\Projet Festival Normandie\\FestivalAPI\\FestivalAPI.csproj"
               }
             }
           }
@@ -122,12 +122,24 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
           "dependencies": {
+            "Google.AdWords": {
+              "target": "Package",
+              "version": "[24.14.0, )"
+            },
+            "IppDotNetSdkForQuickBooksApiV3": {
+              "target": "Package",
+              "version": "[14.6.0, )"
+            },
             "Microsoft.AspNet.WebApi.Client": {
               "target": "Package",
               "version": "[5.2.7, )"
+            },
+            "Microsoft.VisualStudio.Services.Client": {
+              "target": "Package",
+              "version": "[16.170.0, )"
             }
           },
           "imports": [

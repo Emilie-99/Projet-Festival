@@ -22,9 +22,12 @@ namespace wpfFestival
     {
         public MainWindow()
         {
-            InitializeComponent();
-            Menu menu = new Menu();
-            myframe.NavigationService.Navigate(menu);
+            
+                InitializeComponent();
+
+                Connexion connexion = new Connexion();
+                myframe.NavigationService.Navigate(connexion);
+            
         }
     }
 }

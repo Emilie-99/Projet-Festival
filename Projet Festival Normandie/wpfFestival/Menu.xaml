@@ -34,5 +34,6 @@
                 <ImageBrush ImageSource="Images/Bouton image/Festival.png"/>
             </Button.Background>
         </Button>
+        <Button Content="Deconnexion" HorizontalAlignment="Left" Height="33" Margin="627,23,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click_1"/>
     </Grid>
 </Page>

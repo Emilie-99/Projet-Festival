@@ -1,0 +1,20 @@
+﻿wpfFestival
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\emili\source\repos\Projet-Festival\Projet_Festival_Normandie1\Projet Festival Normandie\wpfFestival\obj\Debug\net5.0-windows\
+wpfFestival
+none
+false
+TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+C:\Users\emili\source\repos\Projet-Festival\Projet_Festival_Normandie1\Projet Festival Normandie\wpfFestival\App.xaml
+112130793681
+
+17-1920519296
+406-1247890164
+addFestival.xaml;addOrganisateur.xaml;Connexion.xaml;deleteFestival.xaml;deleteOrganisateur.xaml;MainWindow.xaml;Menu.xaml;pageFestival.xaml;pageOrganisateur.xaml;updateFestival.xaml;updateOrganisateur.xaml;
+
+True
+

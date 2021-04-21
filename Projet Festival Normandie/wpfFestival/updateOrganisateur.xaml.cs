@@ -25,7 +25,11 @@ namespace wpfFestival
         private string EmailOrga;
         public updateOrganisateur()
         {
-            InitializeComponent();
+            if (Session.connecte == true)
+            {
+                InitializeComponent();
+            }
+            
             ListeFestivals = API.Instance.GetFestival().Result;
             foreach (Festival festival in ListeFestivals)
             {

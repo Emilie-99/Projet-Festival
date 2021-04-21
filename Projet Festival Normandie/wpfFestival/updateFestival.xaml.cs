@@ -26,13 +26,18 @@ namespace wpfFestival
 
         public updateFestival()
         {
-            InitializeComponent();
-            ListeFestivals = API.Instance.GetFestival().Result;
-            foreach (Festival festival in ListeFestivals)
+            if( Session.connecte == true) 
             {
-                LbFestivals.Items.Add(festival.Nom_Festival);
+                InitializeComponent();
+                ListeFestivals = API.Instance.GetFestival().Result;
+                foreach (Festival festival in ListeFestivals)
+                {
+                    LbFestivals.Items.Add(festival.Nom_Festival);
+
+                }
 
             }
+           
         }
 
         private void LbFestivals_SelectionChanged(object sender, SelectionChangedEventArgs e)
