@@ -20,11 +20,11 @@ namespace FestivalAPI.Models
         public string Email { get; set; }
 
         public string Genre { get; set; }
-        public int Telephone { get; set; }
+        public  string Telephone { get; set; }
         public int Code_postal { get; set; }
         public string Commune { get; set; }
         public string Pays { get; set; }
-        public string Date { get; set; }
+        public DateTime Date_de_naissance { get; set; }
 
     }
 }
